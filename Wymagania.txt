@@ -1,0 +1,36 @@
+Pomysł na projekt: "LinkVault" (Inteligentny menedżer wiedzy i zakładek)
+
+Zamiast robić kolejną nudną listę To-Do, zróbmy coś, co wykorzysta najmocniejsze strony obu technologii. LinkVault to aplikacja, do której "wrzucasz" linki (do artykułów, filmów na YT, narzędzi), a aplikacja sama organizuje je za Ciebie.
+
+Oto co fajnego i rozwijającego mógłbyś w nim zaimplementować:
+1. Magia w tle (FastAPI - Background Tasks)
+
+To idealne miejsce, by nauczyć się asynchroniczności.
+
+    Flow: Użytkownik wkleja link na frontendzie. FastAPI zapisuje go w bazie i natychmiast zwraca odpowiedź "Dodano!".
+
+    Zadanie w tle (Background Task): W tym samym czasie FastAPI (w tle) wchodzi na podany link, pobiera jego tytuł, główny obrazek (z metatagów Open Graph) i słowa kluczowe. Jeśli chciałbyś pójść o krok dalej, możesz tu podpiąć proste, darmowe API jakiegoś modelu AI, żeby robiło 2-zdaniowe podsumowanie artykułu.
+
+2. Powiadomienia na żywo (FastAPI + Vue 3 WebSockets)
+
+To funkcja, która zawsze robi świetne wrażenie w projektach.
+
+    Kiedy FastAPI skończy "skrapować" link w tle, wysyła sygnał przez WebSocket do Twojego frontendu.
+
+    Vue 3 odbiera ten sygnał i za pomocą PrimeVue wyświetla ładny wyskakujący Toast (dymek z powiadomieniem): "Przetworzono artykuł: [Tytuł]", a lista linków na ekranie automatycznie się aktualizuje bez odświeżania strony.
+
+3. Bogaty Interfejs (Vue 3 + PrimeVue)
+
+Tutaj pobawisz się nowoczesnym frontendem:
+
+    Komponent DataView lub Card: Do wyświetlania zebranych linków w formie estetycznej siatki (masonry layout, podobnie jak na Pintereście).
+
+    Komponent Dialog: Ładne, modalne okienka do edytowania tagów zakładek.
+
+    Szybkie filtry i wyszukiwarka: Użyjesz reaktywności Vue 3 (funkcji computed), aby użytkownik mógł błyskawicznie filtrować linki po tagach (np. klikasz tag "Python" i widok aktualizuje się w ułamku sekundy).
+
+    Pinia: Użyjesz tego oficjalnego menedżera stanu dla Vue, aby trzymać pobrane dane w pamięci przeglądarki i nie uderzać do API przy każdym przejściu między zakładkami.
+
+4. Uwierzytelnianie (Opcjonalnie dla wyzwania)
+
+W FastAPI bardzo przyjemnie implementuje się logowanie za pomocą tokenów JWT (JSON Web Tokens). Mógłbyś zrobić system kont, aby każdy użytkownik miał swoją własną, prywatną bazę linków. Wymaga to zabezpieczenia endpointów w FastAPI i przechowywania tokena po stronie Vue.
