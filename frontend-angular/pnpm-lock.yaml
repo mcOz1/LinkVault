@@ -1,0 +1,212 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@primeuix/themes':
+        specifier: ^2.0.3
+        version: 2.0.3
+      primeng:
+        specifier: ^21.1.6
+        version: 21.1.6(e05d04094c3cbb629f4f347a86750642)
+
+packages:
+
+  '@angular/cdk@21.2.9':
+    resolution: {integrity: sha512-0JXsr8f7xjV2815esTSq4+zGqWMa0CyNT/DV1F7lYS6qkYXcFdYUzGcd/WjNL05VKkajkSkWmTi6uyVsOpYdGA==}
+    peerDependencies:
+      '@angular/common': ^21.0.0 || ^22.0.0
+      '@angular/core': ^21.0.0 || ^22.0.0
+      '@angular/platform-browser': ^21.0.0 || ^22.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@angular/common@21.2.11':
+    resolution: {integrity: sha512-3Z3SABXpzM6fkX21WCRP6IwrjxNQVHM/3Fk2OXScExOAzpaOpS2bDgS4NB6rtCbmzKL/NFSp7ZPIZigfdqnWGw==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/core': 21.2.11
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@angular/core@21.2.11':
+    resolution: {integrity: sha512-EULAfQ0m/I9hZJes74OFlrnfDWqlfV0esE0CkHehO5IEF9rd769+dfuGEAJAzrz+/6Q3PhS0bWDYiT68z1H8Ag==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/compiler': 21.2.11
+      rxjs: ^6.5.3 || ^7.4.0
+      zone.js: ~0.15.0 || ~0.16.0
+    peerDependenciesMeta:
+      '@angular/compiler':
+        optional: true
+      zone.js:
+        optional: true
+
+  '@angular/forms@21.2.11':
+    resolution: {integrity: sha512-F67V612wHxPXHrbp825VirYfGPKBUM8PvL9atN2Ku1fsdGSFPU3hTxu1HU8fKYLLBpKYVVuqFqzaU/qIpTXGYA==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/common': 21.2.11
+      '@angular/core': 21.2.11
+      '@angular/platform-browser': 21.2.11
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@angular/platform-browser@21.2.11':
+    resolution: {integrity: sha512-Uz/KwGjSEvbE8J9kNSSetzxhBWjCXv9OuxH1w2WkW6jLNU3vgvzuKX7SXDyUys6KJv5TqkClJ9BLeU11QbmJdw==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/animations': 21.2.11
+      '@angular/common': 21.2.11
+      '@angular/core': 21.2.11
+    peerDependenciesMeta:
+      '@angular/animations':
+        optional: true
+
+  '@angular/router@21.2.11':
+    resolution: {integrity: sha512-IB7/KuRDsxAjCOxYNccq2LdCTKuu59cx5MmOhrt+TarvkNE/xdlFkP7vtrCl44DJt0q7/tveWvsn5oqTw7rN7A==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    peerDependencies:
+      '@angular/common': 21.2.11
+      '@angular/core': 21.2.11
+      '@angular/platform-browser': 21.2.11
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@primeuix/motion@0.0.10':
+    resolution: {integrity: sha512-PsZwOPq79Scp7/ionshRcQ5xKVf9+zuLcyY5mf6onK8chHT5C9JGphmcIZ4CzcqxuGEpsm8AIbTGy+zS3RtzLA==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/styled@0.7.4':
+    resolution: {integrity: sha512-QSO/NpOQg8e9BONWRBx9y8VGMCMYz0J/uKfNJEya/RGEu7ARx0oYW0ugI1N3/KB1AAvyGxzKBzGImbwg0KUiOQ==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/styles@2.0.3':
+    resolution: {integrity: sha512-2ykAB6BaHzR/6TwF8ShpJTsZrid6cVIEBVlookSdvOdmlWuevGu5vWOScgIwqWwlZcvkFYAGR/SUV3OHCTBMdw==}
+
+  '@primeuix/themes@2.0.3':
+    resolution: {integrity: sha512-3fS1883mtCWhgUgNf/feiaaDSOND4EBIOu9tZnzJlJ8QtYyL6eFLcA6V3ymCWqLVXQ1+lTVEZv1gl47FIdXReg==}
+
+  '@primeuix/utils@0.6.4':
+    resolution: {integrity: sha512-pZ5f+vj7wSzRhC7KoEQRU5fvYAe+RP9+m39CTscZ3UywCD1Y2o6Fe1rRgklMPSkzUcty2jzkA0zMYkiJBD1hgg==}
+    engines: {node: '>=12.11.0'}
+
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
+  entities@8.0.0:
+    resolution: {integrity: sha512-zwfzJecQ/Uej6tusMqwAqU/6KL2XaB2VZ2Jg54Je6ahNBGNH6Ek6g3jjNCF0fG9EWQKGZNddNjU5F1ZQn/sBnA==}
+    engines: {node: '>=20.19.0'}
+
+  parse5@8.0.1:
+    resolution: {integrity: sha512-z1e/HMG90obSGeidlli3hj7cbocou0/wa5HacvI3ASx34PecNjNQeaHNo5WIZpWofN9kgkqV1q5YvXe3F0FoPw==}
+
+  primeng@21.1.6:
+    resolution: {integrity: sha512-kPLoixeMPXIXdQO+RnALRmMfSbPQYAeGx1yTltqkj7XbMkSm9Dr7IxqZZUYjUHemCcr2wyjW82G68WjSMDj66w==}
+    peerDependencies:
+      '@angular/cdk': ^21.0.0
+      '@angular/common': ^21.0.0
+      '@angular/core': ^21.0.7
+      '@angular/forms': ^21.0.0
+      '@angular/platform-browser': ^21.0.0
+      '@angular/router': ^21.0.0
+      rxjs: ^6.0.0 || ^7.8.1
+
+  rxjs@7.8.2:
+    resolution: {integrity: sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==}
+
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+snapshots:
+
+  '@angular/cdk@21.2.9(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      '@angular/platform-browser': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))
+      parse5: 8.0.1
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@angular/core@21.2.11(rxjs@7.8.2)':
+    dependencies:
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@angular/forms@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      '@angular/platform-browser': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))
+      '@standard-schema/spec': 1.1.0
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))':
+    dependencies:
+      '@angular/common': 21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      tslib: 2.8.1
+
+  '@angular/router@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      '@angular/platform-browser': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@primeuix/motion@0.0.10':
+    dependencies:
+      '@primeuix/utils': 0.6.4
+
+  '@primeuix/styled@0.7.4':
+    dependencies:
+      '@primeuix/utils': 0.6.4
+
+  '@primeuix/styles@2.0.3':
+    dependencies:
+      '@primeuix/styled': 0.7.4
+
+  '@primeuix/themes@2.0.3':
+    dependencies:
+      '@primeuix/styled': 0.7.4
+
+  '@primeuix/utils@0.6.4': {}
+
+  '@standard-schema/spec@1.1.0': {}
+
+  entities@8.0.0: {}
+
+  parse5@8.0.1:
+    dependencies:
+      entities: 8.0.0
+
+  primeng@21.1.6(e05d04094c3cbb629f4f347a86750642):
+    dependencies:
+      '@angular/cdk': 21.2.9(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@angular/common': 21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 21.2.11(rxjs@7.8.2)
+      '@angular/forms': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@angular/platform-browser': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))
+      '@angular/router': 21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2))(@angular/platform-browser@21.2.11(@angular/common@21.2.11(@angular/core@21.2.11(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.11(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@primeuix/motion': 0.0.10
+      '@primeuix/styled': 0.7.4
+      '@primeuix/styles': 2.0.3
+      '@primeuix/utils': 0.6.4
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  rxjs@7.8.2:
+    dependencies:
+      tslib: 2.8.1
+
+  tslib@2.8.1: {}
