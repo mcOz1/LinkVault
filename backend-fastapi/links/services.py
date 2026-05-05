@@ -25,7 +25,7 @@ class LinkService:
     def __init__(
         self,
         session: session.SessionDep,
-        user: User = Depends(auth_service.get_current_user)
+        user: User = Depends(auth_service.get_current_active_user)
         ):
         self._session = session
         self._user = user

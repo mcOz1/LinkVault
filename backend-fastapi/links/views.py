@@ -1,4 +1,3 @@
-import json
 
 from fastapi import APIRouter, Depends, Request, Response, status
 from server.limiter import limiter
@@ -20,7 +19,7 @@ async def create_link(
     request: Request,
     session: session.SessionDep,
     link: str,
-    current_user: User = Depends(auth_service.get_current_user),
+    current_user: User = Depends(auth_service.get_current_active_user),
 ):
     service = LinkService(session=session, user=current_user)
     data = await service.create_link(url=link)

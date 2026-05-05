@@ -55,7 +55,7 @@ async def get_access_token(
 async def get_users(
     request: Request,
     session: session.SessionDep,
-    current_user: User = Depends(auth_service.get_current_user)
+    current_user: User = Depends(auth_service.get_current_active_user)
     ):
     users = await auth_service.get_users(session=session)
     return users
