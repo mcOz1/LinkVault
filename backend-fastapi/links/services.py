@@ -11,7 +11,7 @@ from sqlmodel import select
 
 from links.models import Link, Tag2Link, Tag
 from authentication.models import User
-from authentication.services import auth_service
+from authentication.services import get_current_active_user
 from server import session, settings
 
 
@@ -25,7 +25,7 @@ class LinkService:
     def __init__(
         self,
         session: session.SessionDep,
-        user: User = Depends(auth_service.get_current_active_user)
+        user: User = Depends(get_current_active_user)
         ):
         self._session = session
         self._user = user

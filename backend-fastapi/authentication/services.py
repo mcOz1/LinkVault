@@ -91,15 +91,6 @@ class AuthService:
                 headers={"WWW-Authenticate": "Bearer"},
             )
         return user
-
-
-    async def get_current_active_user(
-        self,
-        current_user: Annotated[User, Depends(get_current_user)],
-    ):
-        if not current_user.active:
-            raise HTTPException(status_code=400, detail="Inactive user")
-        return current_user
     
     async def get_users(
         self,
@@ -128,3 +119,10 @@ class AuthService:
             )
     
 auth_service = AuthService()
+
+async def get_current_active_user(
+    current_user: Annotated[User, Depends(auth_service.get_current_user)],
+):
+    if not current_user.active:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user

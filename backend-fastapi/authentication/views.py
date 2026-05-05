@@ -4,7 +4,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordRequestForm
-from authentication.services import auth_service, Token
+from authentication.services import auth_service, Token, get_current_active_user
 from server import settings, session
 import json
 from server.limiter import limiter
@@ -50,12 +50,12 @@ async def get_access_token(
     )
     return token
 
-@router.get('/users')
+@router.get('/users', response_model=list[User])
 @limiter.limit("1/second")
 async def get_users(
     request: Request,
     session: session.SessionDep,
-    current_user: User = Depends(auth_service.get_current_active_user)
+    current_user: User = Depends(get_current_active_user)
     ):
     users = await auth_service.get_users(session=session)
     return users
