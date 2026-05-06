@@ -19,6 +19,7 @@ from alembic import context
 import importlib
 from pathlib import Path
 from sqlmodel import SQLModel
+from server import settings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,7 +66,14 @@ def run_migrations_offline() -> None:
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url")
+    # url = config.get_main_option("sqlalchemy.url")
+    url = settings.SQLALCHEMY_DATABASE_URL 
+    context.configure(
+        url=url,
+        target_metadata=target_metadata,
+        literal_binds=True,
+        dialect_opts={"paramstyle": "named"},
+    )
     context.configure(
         url=url,
         target_metadata=target_metadata,
@@ -89,9 +97,11 @@ async def run_async_migrations() -> None:
     and associate a connection with the context.
 
     """
+    configuration = config.get_section(config.config_ini_section, {})
+    configuration["sqlalchemy.url"] = settings.SQLALCHEMY_DATABASE_URL
 
     connectable = async_engine_from_config(
-        config.get_section(config.config_ini_section, {}),
+        configuration,
         prefix="sqlalchemy.",
         poolclass=pool.NullPool,
     )
