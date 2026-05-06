@@ -5,9 +5,9 @@ DEBUG = True
 ##############################################################################################
 # Database settings
 ##############################################################################################
-DATABASE_NAME = "LinkVault"
-DATABASE_USERNAME = "postgres"
-DATABASE_PASSWORD = 'postgres'
+DATABASE_NAME = ""
+DATABASE_USERNAME = ""
+DATABASE_PASSWORD = ''
 DATABASE_HOST = "localhost"
 DATABASE_POST = "5432"
 SQLALCHEMY_DATABASE_URL = f'postgresql+asyncpg://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_POST}/{DATABASE_NAME}'

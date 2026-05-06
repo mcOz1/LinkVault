@@ -221,3 +221,4 @@ __marimo__/
 media
 **/node_modules
 **/.vscode
+backend-fastapi/server/settings
