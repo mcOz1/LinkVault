@@ -1,0 +1,111 @@
+<div class="min-h-screen bg-[#0b0e14] flex items-center justify-center px-4 relative overflow-hidden">
+
+  <!-- Background grid -->
+  <div class="absolute inset-0 opacity-30 pointer-events-none"
+       style="background-image: linear-gradient(#1e2535 1px, transparent 1px), linear-gradient(90deg, #1e2535 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
+
+  <!-- Radial glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+       style="background: radial-gradient(circle, rgba(79,142,247,0.15) 0%, transparent 70%);">
+  </div>
+
+  <!-- Card -->
+  <div class="relative z-10 w-full max-w-md bg-[#12161f] border border-[#1e2535] rounded-2xl p-10 shadow-2xl">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8">
+      <div class="flex items-center justify-center w-11 h-11 bg-[#1a2030] border border-[#1e2535] rounded-xl text-[#4f8ef7]">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+          <rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="16" y="1" width="11" height="11" rx="2" fill="currentColor"/>
+          <rect x="1" y="16" width="11" height="11" rx="2" fill="currentColor" opacity="0.4"/>
+          <rect x="16" y="16" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <span class="text-[#edf0f7] text-lg font-light tracking-wide">
+        Acme<strong class="font-bold">OS</strong>
+      </span>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-7">
+      <h1 class="text-[#edf0f7] text-2xl font-semibold tracking-tight mb-1">Zaloguj się</h1>
+      <p class="text-[#6b7a99] text-sm font-light">Witaj z powrotem. Wprowadź swoje dane.</p>
+    </div>
+
+    <!-- Error -->
+    @if (errorMessage) {
+      <p-message severity="error" [text]="errorMessage" styleClass="w-full mb-5" />
+    }
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="flex flex-col gap-5">
+
+      <!-- Email -->
+      <div class="flex flex-col gap-1.5">
+        <label for="email" class="text-[#6b7a99] text-xs font-medium uppercase tracking-widest">
+          Adres e-mail
+        </label>
+        <input
+          pInputText
+          id="username"
+          type="text"
+          formControlName="username"
+          placeholder="jan"
+          class="w-full bg-[#0b0e14] border border-[#1e2535] rounded-xl text-[#edf0f7] text-sm px-4 py-3
+                 placeholder-[#3d4a63] transition-all duration-200
+                 focus:border-[#4f8ef7] focus:ring-2 focus:ring-[#4f8ef7]/20 focus:outline-none"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="flex flex-col gap-1.5">
+        <div class="flex justify-between items-center">
+          <label for="password" class="text-[#6b7a99] text-xs font-medium uppercase tracking-widest">
+            Hasło
+          </label>
+          <a href="#" class="text-[#4f8ef7] text-xs opacity-80 hover:opacity-100 transition-opacity">
+            Zapomniałeś?
+          </a>
+        </div>
+        <p-password
+          inputId="password"
+          formControlName="password"
+          placeholder="••••••••"
+          [feedback]="false"
+          [toggleMask]="true"
+          styleClass="w-full"
+          inputStyleClass="w-full bg-[#0b0e14] !border !border-[#1e2535] !rounded-xl !text-[#edf0f7]
+                          !text-sm !px-4 !py-3 focus:!border-[#4f8ef7]
+                          focus:!ring-2 focus:!ring-[#4f8ef7]/20 focus:!outline-none"
+          autocomplete="current-password"
+          [class.ng-invalid]="password.invalid && password.touched"
+          [class.ng-dirty]="password.touched"
+        />
+        @if (password.invalid && password.touched) {
+          <small class="text-red-400 text-xs">
+            {{ password.errors?.['required'] ? 'Hasło jest wymagane.' : 'Hasło musi mieć min. 6 znaków.' }}
+          </small>
+        }
+      </div>
+
+
+      <!-- Submit -->
+      <p-button
+        type="submit"
+        label="Zaloguj się"
+        [loading]="loading"
+        icon="pi pi-arrow-right"
+        iconPos="right"
+        styleClass="w-full !bg-[#4f8ef7] !border-none !rounded-xl !font-semibold !text-sm !py-3
+                    hover:!bg-[#3a7ef0] transition-all duration-200 mt-1"
+      />
+
+    </form>
+
+    <p class="text-center text-[#3d4a63] text-xs mt-6">
+      Nie masz konta?
+      <a href="#" class="text-[#4f8ef7] font-medium hover:underline">Zarejestruj się</a>
+    </p>
+
+  </div>
+</div>

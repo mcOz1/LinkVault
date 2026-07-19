@@ -20,20 +20,24 @@ async def lifespan(app: FastAPI):
     yield
     await sessionmanager.close()
 
+
 app = FastAPI(lifespan=lifespan, debug=settings.DEBUG)
 
 os.makedirs(settings.BASE_UPLOAD_DIR, exist_ok=True)
-app.mount(settings.UPLOAD_URL, StaticFiles(directory=settings.BASE_UPLOAD_DIR), name="media")
+app.mount(
+    settings.UPLOAD_URL, StaticFiles(directory=settings.BASE_UPLOAD_DIR), name="media"
+)
 app.include_router(auth_router)
 app.include_router(link_router)
+origins = ["http://localhost:4200"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:4200"], # Pozwala na zapytania z Angulara
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler) # type: ignore
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)  # type: ignore
