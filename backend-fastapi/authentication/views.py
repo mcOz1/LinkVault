@@ -3,7 +3,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordRequestForm
-from authentication.services import auth_service, Token, get_current_active_user
+from authentication.services import auth_service, get_current_active_user
 from server import settings, session
 import json
 from server.limiter import limiter
